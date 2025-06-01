@@ -1,0 +1,103 @@
+@keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #ec9242 }
+        }
+        
+        .typing-animation {
+            overflow: hidden;
+            border-right: .15em solid #ec9242;
+            white-space: nowrap;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        .button-animation {
+            animation: slideUp 0.5s ease-out forwards;
+        }
+        
+        .font-extended {
+            font-stretch: expanded;
+            letter-spacing: 0.2em;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('gambar/gedung.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        
+        .content-container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .corner-logo {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: 20px;
+        }
+        
+        .business-chat-btn {
+            background-color: black;
+            color: #ec9242;
+            border: 1px solid #ec9242;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-align: center;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        
+        .business-chat-btn:hover {
+            background-color: #111;
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-align: center;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+        
+        @media (max-width: 640px) {
+            .corner-logo {
+                width: 60px;
+                height: 60px;
+                top: 15px;
+            }
+        }
